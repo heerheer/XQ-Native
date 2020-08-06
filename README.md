@@ -12,7 +12,7 @@
 
 呈现目录结构为
 
-'''
+```
  └─先驱机器人主目录
      │  CQP.dll // XQ Native Bridge
      │
@@ -29,4 +29,4 @@
      └─Plugin // 插件文件夹
              XQNative.XQ.dll // XQ-Native桥接插件
              Native.XQ.Lib.XQ.dll // Native发送消息兼容插件
-'''
+```
