@@ -1,6 +1,6 @@
 # XQ-Native
 让XQ先驱机器人兼容大部分CQ插件
-> Jie2GG老大，永远的神
+> Jie2GG老大，永远滴
 
 ## 实现原理
 ![avatar](https://s1.ax1x.com/2020/08/06/ag8Ypq.png)
