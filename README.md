@@ -12,7 +12,7 @@
 
 呈现目录结构为
 
-> └─先驱机器人主目录
+>> └─先驱机器人主目录
 >>     │  CQP.dll // XQ Native Bridge
 >>     │
 >>     ├─CQPlugins // 被XQ-Native加载的所有CQ插件
