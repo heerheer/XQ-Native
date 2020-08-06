@@ -12,19 +12,21 @@
 
 呈现目录结构为
 
->> └─先驱机器人主目录
->>     │  CQP.dll // XQ Native Bridge
->>     │
->>     ├─CQPlugins // 被XQ-Native加载的所有CQ插件
->>     │      ├─com.example.cqapp1 //某个目录
->>     │      │        │─ app.dll
->>     │      │        └─ app.jso
->>     │      │─com.example.cqapp2 //某个目录
->>     │      │        │─ app.dll
->>     │      │        └─ app.json
->>     │      └─com.example.cqapp3 //某个目录
->>     │               │─ app.dll
->>     │               └─ app.json
->>     └─Plugin // 插件文件夹
->>             XQNative.XQ.dll // XQ-Native桥接插件
->>             Native.XQ.Lib.XQ.dll // Native发送消息兼容插件
+'''
+ └─先驱机器人主目录
+     │  CQP.dll // XQ Native Bridge
+     │
+     ├─CQPlugins // 被XQ-Native加载的所有CQ插件
+     │      ├─com.example.cqapp1 //某个目录
+     │      │        │─ app.dll
+     │      │        └─ app.jso
+     │      │─com.example.cqapp2 //某个目录
+     │      │        │─ app.dll
+     │      │        └─ app.json
+     │      └─com.example.cqapp3 //某个目录
+     │               │─ app.dll
+     │               └─ app.json
+     └─Plugin // 插件文件夹
+             XQNative.XQ.dll // XQ-Native桥接插件
+             Native.XQ.Lib.XQ.dll // Native发送消息兼容插件
+'''
