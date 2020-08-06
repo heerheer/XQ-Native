@@ -1,6 +1,9 @@
 # XQ-Native
 让XQ先驱机器人兼容大部分CQ插件
 
+## 实现原理
+![avatar](https://github.com/heerheer/XQ-Native/raw/master/XQ_ONO-CQBridge.png)
+
 ## 快速使用
 
 1. 下载 [Native.XQ.Lib](https://github.com/heerheer/XQ-Native/raw/master/Plugin/Native.XQ.Lib.XQ.dll) 插件 ， 放入Plugin（先驱机器人插件目录）
