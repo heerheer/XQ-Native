@@ -2,7 +2,7 @@
 让XQ先驱机器人兼容大部分CQ插件
 
 ## 实现原理
-![avatar](https://github.com/heerheer/XQ-Native/raw/master/XQ_ONO-CQBridge.png)
+![avatar](https://s1.ax1x.com/2020/08/06/ag8Ypq.png)
 
 ## 快速使用
 
