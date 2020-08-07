@@ -2,40 +2,9 @@
 让XQ先驱机器人兼容大部分CQ插件
 > Jie2GG老大，永远滴神
 
-## 使用教程
-移至 [wiki](https://github.com/heerheer/XQ-Native/wiki)
+## 源码
 
-# 出现问题？
-请Githu本仓库提交Issue（见上方）
-
-## 实现原理
-![avatar](https://s1.ax1x.com/2020/08/07/aW3f8s.png)
-
-### 注意
-1. 使用本插件载入的CQ插件 **不会** 出现在先驱插件列表中
-2. 本插件**暂时**不支持机器人QQ 大于 Int最大数的
-
-
-## 目录结构
-
-```
- └─先驱机器人主目录
-     │  CQP.dll // XQ Native Bridge
-     │
-     ├─CQPlugins // 被XQ-Native加载的所有CQ插件
-     │      ├─com.example.cqapp1 //某个目录
-     │      │        │─ app.dll
-     │      │        └─ app.jso
-     │      │─com.example.cqapp2 //某个目录
-     │      │        │─ app.dll
-     │      │        └─ app.json
-     │      └─com.example.cqapp3 //某个目录
-     │               │─ app.dll
-     │               └─ app.json
-     └─Plugin // 插件文件夹
-             XQNative.XQ.dll // XQ-Native桥接插件
-             Native.XQ.Lib.XQ.dll // Native发送消息兼容插件
-```
+包含三个易语言源文件 和 c#工程
 
 ## 捐赠
 > 此处捐赠二维码并不是本人，而是让我受益匪浅的Jie2GG老大
