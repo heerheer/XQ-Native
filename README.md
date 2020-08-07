@@ -1,4 +1,4 @@
-# XQ-Native
+# XQ-Native (已停止维护 源码见dev分支)
 让XQ先驱机器人兼容大部分CQ插件
 > Jie2GG老大，永远滴神
 
