@@ -3,7 +3,7 @@
 > Jie2GG老大，永远滴神
 
 ## 实现原理
-![avatar](https://s1.ax1x.com/2020/08/06/ag8Ypq.png)
+![avatar](https://s1.ax1x.com/2020/08/07/aW3f8s.png)
 
 ## 快速使用
 1. 下载 [Native.XQ.Lib](https://github.com/heerheer/XQ-Native/blob/master/Plugin/Native.XQ.Lib.XQ.dll) 插件 ， 放入Plugin（先驱机器人插件目录）
