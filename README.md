@@ -2,6 +2,9 @@
 让XQ先驱机器人兼容大部分CQ插件
 > Jie2GG老大，永远滴神
 
+# 出现问题？
+请Githu本仓库提交Issue（见上方）
+
 ## 实现原理
 ![avatar](https://s1.ax1x.com/2020/08/07/aW3f8s.png)
 
