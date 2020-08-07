@@ -2,12 +2,14 @@
 让XQ先驱机器人兼容大部分CQ插件
 > Jie2GG老大，永远滴神
 
+## 使用教程
+移至 [wiki](https://github.com/heerheer/XQ-Native/wiki)
+
 # 出现问题？
 请Githu本仓库提交Issue（见上方）
 
 ## 实现原理
 ![avatar](https://s1.ax1x.com/2020/08/07/aW3f8s.png)
-
 
 ### 注意
 1. 使用本插件载入的CQ插件 **不会** 出现在先驱插件列表中
