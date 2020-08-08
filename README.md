@@ -1,6 +1,10 @@
-# XQ-Native (已停止维护 源码见dev分支)
+# XQ-Native 
 让XQ先驱机器人兼容大部分CQ插件
 > Jie2GG老大，永远滴神
+
+## 更新日志
+[点我](https://github.com/heerheer/XQ-Native/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97)
+
 
 ## 使用教程
 移至 [wiki](https://github.com/heerheer/XQ-Native/wiki)
