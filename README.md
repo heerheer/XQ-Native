@@ -2,6 +2,10 @@
 让XQ先驱机器人兼容大部分CQ插件
 > Jie2GG老大，永远滴神
 
+## 推荐
+我们推荐你们使用更频繁更新的c++编写的CQXQ插件获得更简单跟强大的功能实现
+[CQXQ](https://github.com/w4123/CQXQ/)
+
 ## 更新日志
 [点我](https://github.com/heerheer/XQ-Native/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97)
 
