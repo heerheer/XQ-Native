@@ -62,6 +62,9 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Panuon.UI.Silver, Version=2.1.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Panuon.UI.Silver.2.1.1.1-beta\lib\net45\Panuon.UI.Silver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -80,10 +83,19 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\SelectedToVisable.cs" />
     <Compile Include="CQPlugin.cs" />
+    <Compile Include="CQPluginListView.xaml.cs">
+      <DependentUpon>CQPluginListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="JsonDoctor.cs" />
     <Compile Include="Kernel32.cs" />
     <Compile Include="XQNativeCaller.cs" />
+    <Compile Include="XQNC_Log.cs" />
+    <Page Include="CQPluginListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

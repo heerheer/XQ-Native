@@ -19,13 +19,18 @@ namespace XQNative_Console
 
         public string PluginName { get; set; }
 
+        public string PluginID { get; set; }
+
         public string PluginPath { get; set; }
+
+        public int AuthCode { get; set; } = Guid.NewGuid().GetHashCode();
 
 
         public string _eventPrivateMsg { get; set; } = "_eventPrivateMsg";
         public string _eventGroupMsg { get; set; } = "_eventGroupMsg";
         public string _eventEnable { get; set; } = "_eventEnable";
         public string _eventDisable { get; set; } = "_eventDisable";
+        public string _eventStartUp { get; set; } = "_eventStartup";
 
         public List<MenuNode> MenuFuncs { get; set; } = new List<MenuNode>();
         

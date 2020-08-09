@@ -3,15 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
         xmlns:local="clr-namespace:XQNative_Console"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Closing="Window_Closing"
         Loaded="Window_Loaded"
         xmlns:tb="http://www.hardcodet.net/taskbar"
-        Title="MainWindow" Height="450" Width="800">
+        Title="XQNative-Console UI来自 九年陪伴-酷Q" Height="450" Width="800">
+
     <Window.Resources>
-        <ResourceDictionary Source="Resources/Dictionary.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Dictionary.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Panuon.UI.Silver;component/Control.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <Grid>
 
@@ -22,9 +29,40 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="8*"/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
-            <RichTextBox IsReadOnly="True" x:Name="LogTbx" Margin="5"  ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <DataGrid ItemsSource="{Binding Logs}" AutoGenerateColumns="False" 
+                IsReadOnly="True" x:Name="LogTbx" Margin="5"  ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Time}" ClipboardContentBinding="{x:Null}" Header="时间"/>
+                    <DataGridTextColumn Binding="{Binding From}" ClipboardContentBinding="{x:Null}" Header="来源"/>
+                    <DataGridTextColumn Binding="{Binding Content}" ClipboardContentBinding="{x:Null}" Header="内容" MinWidth="40" Width="520"/>
+                    <DataGridTextColumn Binding="{Binding Type}" ClipboardContentBinding="{x:Null}" Header="类型"/>
+                    <DataGridTextColumn Binding="{Binding Status}" ClipboardContentBinding="{x:Null}" Header="状态/耗时(ms)"/>
+                </DataGrid.Columns>
+                <DataGrid.CellStyle>
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Style.Setters>
+                            <Setter Property="Height" Value="20"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style.Setters>
+                        <Style.Triggers >
+                            <DataTrigger Binding="{Binding Type}" Value="Info">
+                                <Setter Property="Foreground" Value="DarkBlue" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Type}" Value="Tip">
+                                <Setter Property="Foreground" Value="DarkGreen" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Type}" Value="Debug">
+                                <Setter Property="Foreground" Value="Violet" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Type}" Value="Error">
+                                <Setter Property="Foreground" Value="Red" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>
+            </DataGrid>
             <Grid Grid.Column="1" Margin="5">
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -34,24 +72,39 @@
                 </Grid.RowDefinitions>
                 <TextBlock  Text="XQNative-Console" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
                 <TextBlock  Text="By 迷人的Heer" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="64,56,3.4,21" />
-                <TextBlock Grid.Row="1" Text="{Binding CQPlugins.Count,StringFormat=目前正在运行{0}个CQ插件}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="PluginCountTbx" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Row="2" Text="我们终将在一个更加包容的平行世界相遇" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Height="35" Width="120" VerticalAlignment="Bottom" Margin="0,0,0,5" BorderBrush="{x:Null}" BorderThickness="0" Content="应用列表&gt;&gt;" Grid.Row="3">
+                    <Button.ContextMenu>
+                        <ContextMenu ItemsSource="{Binding CQPluginsMenu}"/>
+                    </Button.ContextMenu>
+                </Button>
             </Grid>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="6*"/>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+
             </Grid.ColumnDefinitions>
-            <TextBox Margin="5" BorderThickness="2" BorderBrush="DarkGray" Style="{StaticResource WarkTextBoxStyle}" Tag="> Please typing your command ..."/>
-            <Button Grid.Column="1" Margin="5" BorderBrush="{x:Null}" BorderThickness="0" Content=""/>
-            <Button Grid.Column="2" Margin="5" BorderBrush="{x:Null}" BorderThickness="0" Content="应用列表>>">
-                <Button.ContextMenu>
-                    <ContextMenu ItemsSource="{Binding CQPluginsMenu}">
-                        
-                    </ContextMenu>
-                </Button.ContextMenu>
-            </Button>
+            <TextBox Grid.Column="1" VerticalContentAlignment="Center"
+                Margin="5" BorderThickness="2" BorderBrush="DarkGray" Style="{StaticResource WarkTextBoxStyle}" Tag="> Please typing your command ..."/>
+            <ComboBox Margin="5" pu:ComboBoxHelper.ItemsHeight="30" SelectedIndex="0">
+                <ComboBoxItem Content="All" VerticalContentAlignment="Center"/>
+                <ComboBoxItem Content="Info" VerticalContentAlignment="Center"/>
+                <ComboBoxItem Content="Tip" VerticalContentAlignment="Center"/>
+                <ComboBoxItem Content="Error" VerticalContentAlignment="Center"/>
+                <ComboBoxItem Content="Debug" VerticalContentAlignment="Center"/>
+            </ComboBox>
+
+            <Button Grid.Column="2" Margin="5" Content="打开应用列表" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                    Click="Btn_Plugins"/>
+            <CheckBox Grid.Column="3" Margin="5" Content="实时模式" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                      IsChecked="{Binding autoScroll,Mode=TwoWay}" />
+            <Button Grid.Column="4" Content="隐藏日志窗口" Margin="5"/>
         </Grid>
     </Grid>
 </Window>

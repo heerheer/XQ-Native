@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XQNative-Console", "XQNative-Console.csproj", "{A4E1B188-4C0D-4C06-B963-6B15313053FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XQNative.Console.Test", "..\XQNative.Console.Test\XQNative.Console.Test.csproj", "{A4B31F93-5225-4F68-9049-37D7A33477EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A4E1B188-4C0D-4C06-B963-6B15313053FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4E1B188-4C0D-4C06-B963-6B15313053FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4E1B188-4C0D-4C06-B963-6B15313053FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4B31F93-5225-4F68-9049-37D7A33477EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B31F93-5225-4F68-9049-37D7A33477EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B31F93-5225-4F68-9049-37D7A33477EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B31F93-5225-4F68-9049-37D7A33477EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
